@@ -1,1 +1,153 @@
-<h1>Hello world</h2>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+
+
+        .navbar {
+            background-color: red;
+            height: 50px;
+            padding: 0px 30px;
+            overflow: hidden;
+
+            display: flex;
+            justify-content: space-between;
+
+            transition: 0.6s;
+
+        }
+
+
+        .navbar a {
+            line-height: 55px;
+            color: rgb(255, 255, 255, 0.60);
+            text-decoration: none;
+            padding: 7px 15px;
+
+
+        }
+
+        .navbar a.active,
+        .navbar a:hover {
+            color: rgb(255, 255, 255, 0.87);
+        }
+
+
+        .navbar .right span {
+            margin-top: 15px;
+            color: white;
+            cursor: pointer;
+            display: none;
+        }
+
+        .navbar .left {
+            display: flex;
+        }
+
+        .navbar .left h3 {
+            line-height: 55px;
+            color: white;
+
+        }
+
+        .navlist {
+            margin-left: 25px;
+        }
+
+        @media screen and (max-width:500px) {
+
+            .navbar .left .navlist {
+                margin-left: 0px;
+
+            }
+
+            .navbar .left .navlist a {
+                display: block;
+                padding: 0px 2px;
+                line-height: 50px;
+            }
+
+            .navbarMobile {
+                height: 270px;
+
+            }
+
+            .navbar .left {
+                display: block;
+            }
+
+            .navbar .right span {
+
+                display: block;
+            }
+
+
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+
+    <nav class="navbar" id="navID">
+
+
+        <div class="left">
+
+
+            <h3>NavBar</h3>
+
+
+            <div class="navlist">
+                <a href="" class="active">Home</a>
+                <a href="">About</a>
+                <a href="">Blog</a>
+                <a href="">ContactUs</a>
+            </div>
+
+
+
+        </div>
+
+        <div class="right">
+            <span onclick="Toggle()" class="material-icons">menu</span>
+        </div>
+
+    </nav>
+
+
+    <script>
+
+        var navID = document.getElementById("navID");
+
+        function Toggle() {
+            navID.classList.toggle("navbarMobile");
+        }
+
+    </script>
+
+
+</body>
+
+</html>
